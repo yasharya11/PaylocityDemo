@@ -8,6 +8,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Paylocity.Models;
 using Paylocity.Models.Shared;
+using Paylocity.Models.PageModels;
+using Paylocity.Util;
+using PaylocityCore.ResponseModels;
 
 namespace Paylocity.Controllers
 {
@@ -18,13 +21,34 @@ namespace Paylocity.Controllers
 
         public HomeController(ILogger<HomeController> logger, PaylocityDbContext db)
         {
-            _logger = logger;
             _db = db;
+            _logger = logger;
         }
 
         public IActionResult Index()
         {
             return View();
+        }
+
+        public async Task<IActionResult> ViewEmployees()
+        {
+            EmployeesPtPageModel modelOut = new EmployeesPtPageModel();
+            modelOut.Resp = new PaylocityCore.ResponseModels.StdRespModel();
+
+            try
+            {
+                modelOut.Employees = await _db.Paylocity_Employees.ToListAsync();
+                modelOut.Resp.result = PaylocityCore.ResponseModels.resultTypesEnum.Success;
+            }
+            catch(Exception ex)
+            {
+                StdRespModel ErrorOut = new StdRespModel();
+                ErrorOut.rsltMsg = "There was an error getting the records";
+                ErrorOut.rsltDesc = ex.Message;
+                return Json(ErrorOut);
+            }
+
+            return View("ViewEmployeesPt", modelOut);
         }
 
         public IActionResult Privacy()

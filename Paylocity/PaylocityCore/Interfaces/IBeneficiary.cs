@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using PaylocityCore.Entities;
 
 namespace PaylocityCore.Interfaces
 {
     interface IBeneficiary
     {
-        public int Id { get; set; }
-
         public string Fname { get; set; }
 
         public string Lname { get; set; }

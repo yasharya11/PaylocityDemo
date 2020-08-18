@@ -84,3 +84,4 @@ C:\Users\yasha\Desktop\Code\2020\Paylocity\PaylocityDemo\Paylocity\Paylocity\bin
 C:\Users\yasha\Desktop\Code\2020\Paylocity\PaylocityDemo\Paylocity\Paylocity\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\yasha\Desktop\Code\2020\Paylocity\PaylocityDemo\Paylocity\Paylocity\obj\Debug\netcoreapp3.1\Paylocity.csproj.CoreCompileInputs.cache
 C:\Users\yasha\Desktop\Code\2020\Paylocity\PaylocityDemo\Paylocity\Paylocity\obj\Debug\netcoreapp3.1\Paylocity.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\yasha\Desktop\Code\2020\Paylocity\PaylocityDemo\Paylocity\Paylocity\obj\Debug\netcoreapp3.1\Razor\Views\Home\ViewEmployeesPt.cshtml.g.cs

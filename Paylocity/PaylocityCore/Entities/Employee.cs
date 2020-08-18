@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using PaylocityCore.Interfaces;
 
 namespace PaylocityCore.Entities
 {
     public class Employee : IBeneficiary
     {
-        public int Id { get; set; }
+        [Key]
+        public int EmployeeId { get; set; }
 
         public string Fname { get; set; }
 
@@ -16,5 +20,10 @@ namespace PaylocityCore.Entities
         public DateTime Dob { get; set; }
         
         public BenefitsModifier Modifier { get; set; }
+
+        public Employee()
+        {
+
+        }
     }
 }

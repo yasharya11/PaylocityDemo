@@ -1,1 +1,4 @@
-﻿
+﻿.clsEmployeeTr:hover{
+    border: solid 2px lightblue;
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+﻿@model Paylocity.Models.PageModels.EmployeesPtPageModel
+
+@{
+    Layout = "";
+}
+<br />
+<hr />
+<div>
+    <h3>LIST OF EMPLOYEES</h3>
+    <center>
+        <table class="table table-striped" style="text-align:center;">
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+            </tr>
+            @foreach (PaylocityCore.Entities.Employee emp in Model.Employees)
+            {
+                <tr class="clsEmployeeTr">
+                    <td>@emp.EmployeeId</td>
+                    <td>@emp.Fname</td>
+                    <td>@emp.Lname</td>
+                    <td>@emp.Dob </td>
+                </tr>
+            }
+        </table>
+    </center>
+</div>
+<br />
+<br />

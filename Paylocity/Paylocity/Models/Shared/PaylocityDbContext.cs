@@ -14,8 +14,8 @@ namespace Paylocity.Models.Shared
 
         }
 
-        public DbSet<Employee> Employees { get; set; }
-        public DbSet<Dependant> Dependants { get; set; }
-        public DbSet<BenefitsModifier> BenefitModifiers { get; set; }
+        public DbSet<Employee> Paylocity_Employees { get; set; }
+        public DbSet<Dependant> Paylocity_Dependants { get; set; }
+        public DbSet<BenefitsModifier> Paylocity_BenefitModifiers { get; set; }
     }
 }

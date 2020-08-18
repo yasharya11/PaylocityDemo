@@ -1,13 +1,18 @@
 ﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using PaylocityCore.Interfaces;
 
 namespace PaylocityCore.Entities
 {
     public class Dependant : IBeneficiary
     {
-        public int Id { get; set; }
+        [Key]
+        public int DependantId { get; set; }
 
         public string Fname { get; set; }
 
