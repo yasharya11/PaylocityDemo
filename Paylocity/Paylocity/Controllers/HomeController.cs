@@ -5,17 +5,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 using Paylocity.Models;
+using Paylocity.Models.Shared;
 
 namespace Paylocity.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private PaylocityDbContext _db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, PaylocityDbContext db)
         {
             _logger = logger;
+            _db = db;
         }
 
         public IActionResult Index()

@@ -1,0 +1,5 @@
+C:\Users\yasha\Desktop\Code\2020\Paylocity\PaylocityDemo\Paylocity\PaylocityCore\bin\Debug\netstandard2.0\PaylocityCore.deps.json
+C:\Users\yasha\Desktop\Code\2020\Paylocity\PaylocityDemo\Paylocity\PaylocityCore\bin\Debug\netstandard2.0\PaylocityCore.dll
+C:\Users\yasha\Desktop\Code\2020\Paylocity\PaylocityDemo\Paylocity\PaylocityCore\obj\Debug\netstandard2.0\PaylocityCore.csprojAssemblyReference.cache
+C:\Users\yasha\Desktop\Code\2020\Paylocity\PaylocityDemo\Paylocity\PaylocityCore\obj\Debug\netstandard2.0\PaylocityCore.AssemblyInfoInputs.cache
+C:\Users\yasha\Desktop\Code\2020\Paylocity\PaylocityDemo\Paylocity\PaylocityCore\obj\Debug\netstandard2.0\PaylocityCore.AssemblyInfo.cs

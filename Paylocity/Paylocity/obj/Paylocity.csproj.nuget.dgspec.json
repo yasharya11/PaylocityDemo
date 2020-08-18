@@ -4,6 +4,71 @@
     "C:\\Users\\yasha\\Desktop\\Code\\2020\\Paylocity\\PaylocityDemo\\Paylocity\\Paylocity\\Paylocity.csproj": {}
   },
   "projects": {
+    "C:\\Users\\yasha\\Desktop\\Code\\2020\\Paylocity\\PaylocityDemo\\Paylocity\\PaylocityCore\\PaylocityCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\yasha\\Desktop\\Code\\2020\\Paylocity\\PaylocityDemo\\Paylocity\\PaylocityCore\\PaylocityCore.csproj",
+        "projectName": "PaylocityCore",
+        "projectPath": "C:\\Users\\yasha\\Desktop\\Code\\2020\\Paylocity\\PaylocityDemo\\Paylocity\\PaylocityCore\\PaylocityCore.csproj",
+        "packagesPath": "C:\\Users\\yasha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yasha\\Desktop\\Code\\2020\\Paylocity\\PaylocityDemo\\Paylocity\\PaylocityCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\yasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\yasha\\Desktop\\Code\\2020\\Paylocity\\PaylocityDemo\\Paylocity\\Paylocity\\Paylocity.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -29,7 +94,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\yasha\\Desktop\\Code\\2020\\Paylocity\\PaylocityDemo\\Paylocity\\PaylocityCore\\PaylocityCore.csproj": {
+                "projectPath": "C:\\Users\\yasha\\Desktop\\Code\\2020\\Paylocity\\PaylocityDemo\\Paylocity\\PaylocityCore\\PaylocityCore.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -40,6 +109,28 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[4.5.2, )"
+            },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.5.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

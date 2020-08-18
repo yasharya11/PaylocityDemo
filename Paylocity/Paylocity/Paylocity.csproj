@@ -4,4 +4,21 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\PageModels\Shared\" />
+    <Folder Include="Views\Home\Employee\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.5.2" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="jQuery" Version="3.5.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PaylocityCore\PaylocityCore.csproj" />
+  </ItemGroup>
+
 </Project>
