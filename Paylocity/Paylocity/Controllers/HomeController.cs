@@ -11,6 +11,7 @@ using Paylocity.Models.Shared;
 using Paylocity.Models.PageModels;
 using Paylocity.Util;
 using PaylocityCore.ResponseModels;
+using PaylocityCore.Entities;
 
 namespace Paylocity.Controllers
 {
@@ -49,6 +50,39 @@ namespace Paylocity.Controllers
             }
 
             return View("ViewEmployeesPt", modelOut);
+        }
+
+        public async Task<IActionResult> ViewEmployee(int id)
+        {
+            EmployeePtPageModel modelOut = new EmployeePtPageModel();
+            modelOut.Resp = new PaylocityCore.ResponseModels.StdRespModel();
+            modelOut.Dependants = new List<Dependant>();
+
+            try
+            {
+                modelOut.Employee = await _db.Paylocity_Employees.SingleOrDefaultAsync(e => e.EmployeeId == id);
+                IEnumerable<Dependant> dependants = await _db.Paylocity_Dependants.ToListAsync();
+                foreach(Dependant dependant in dependants)
+                {
+                    if(dependant.EmployeeId == id)
+                    {
+                        modelOut.Dependants.Add(dependant);
+                    }
+                }
+
+                Helper.ExeEmployeeCalculations(ref modelOut);
+
+                modelOut.Resp.result = PaylocityCore.ResponseModels.resultTypesEnum.Success;
+            }
+            catch (Exception ex)
+            {
+                StdRespModel ErrorOut = new StdRespModel();
+                ErrorOut.rsltMsg = "There was an error getting that record";
+                ErrorOut.rsltDesc = ex.Message;
+                return Json(ErrorOut);
+            }
+
+            return View("ViewEmployeePt", modelOut);
         }
 
         public IActionResult Privacy()

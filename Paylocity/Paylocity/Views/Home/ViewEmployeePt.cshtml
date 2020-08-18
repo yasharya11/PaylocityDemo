@@ -1,0 +1,108 @@
+﻿@model Paylocity.Models.PageModels.EmployeePtPageModel
+
+@{
+    Layout = "";
+}
+<div id="backBtn">Back</div>
+<br />
+<hr />
+<div>
+    <h3>@Model.Employee.Fname @Model.Employee.Lname</h3>
+    <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div>
+                    <p>Raw Yearly Pay:</p>
+                    <p>@Model.RawPayPrYr</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <p>Raw Pay Per Check:</p>
+                    <p>@Model.Employee.PayPrChk</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div>
+                    <p>Employee Benefits Cost Per Year:</p>
+                    <p>@Model.EmpBenefitsCostsPrYr</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <p>Employee Benefits Cost Per Check:</p>
+                    <p>@Model.EmpBenefitsCostsPrChk</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div>
+                    <p>Dependant Benefits Cost Per Year:</p>
+                    <p>@Model.DepBenefitsCostsPrYr</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <p>Dependant Benefits Cost Per Check:</p>
+                    <p>@Model.DepBenefitsCostsPrChk</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div>
+                    <p>Employee's Out of Pocket, Yearly:</p>
+                    <p>@Model.EmpContributionCostPrYr</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <p>Employee's Out of Pocket, per Check:</p>
+                    <p>@Model.EmpContributionCostPrChk</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div>
+                    <p>Employee's Take Home per Year</p>
+                    <p>@Model.GrossPayPrYr</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <p>Employee's Take Home per Check</p>
+                    <p>@Model.GrossPayPrChk</p>
+                </div>
+            </div>
+        </div>
+        @if (Model.Dependants.Count > 0)
+        {
+            <center>
+                <h3>Dependants</h3>
+                <table class="table">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                    @foreach (PaylocityCore.Entities.Dependant dependant in Model.Dependants)
+                    {
+                        <tr>
+                            <td>@dependant.Fname</td>
+                            <td>@dependant.Lname</td>
+                        </tr>
+                    }
+                </table>
+            </center>
+        }
+    </div>
+</div>
+<br />
+<br />
+
+
+<script src="~/js/site.js" asp-append-version="true"></script>

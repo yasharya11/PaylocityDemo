@@ -21,6 +21,8 @@ namespace PaylocityCore.Entities
         
         public BenefitsModifier Modifier { get; set; }
 
+        public Decimal PayPrChk { get; set; }
+
         public Employee()
         {
 

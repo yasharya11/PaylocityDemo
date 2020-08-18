@@ -8,7 +8,7 @@
 <div>
     <h3>LIST OF EMPLOYEES</h3>
     <center>
-        <table class="table table-striped" style="text-align:center;">
+        <table class="table" style="text-align:center;">
             <tr>
                 <th>ID</th>
                 <th>First Name</th>
@@ -18,7 +18,7 @@
             @foreach (PaylocityCore.Entities.Employee emp in Model.Employees)
             {
                 <tr class="clsEmployeeTr">
-                    <td>@emp.EmployeeId</td>
+                    <td class="clsEmployeeIdTd">@emp.EmployeeId</td>
                     <td>@emp.Fname</td>
                     <td>@emp.Lname</td>
                     <td>@emp.Dob </td>
@@ -29,3 +29,6 @@
 </div>
 <br />
 <br />
+
+
+<script src="~/js/site.js" asp-append-version="true"></script>

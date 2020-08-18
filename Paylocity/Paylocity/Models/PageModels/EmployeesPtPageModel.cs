@@ -15,8 +15,6 @@ namespace Paylocity.Models.PageModels
 
         public IEnumerable<Employee> Employees { get; set; }
 
-        public string htm { get; set; }
-
         public EmployeesPtPageModel()
         {
             Employees = new List<Employee>();

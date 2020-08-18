@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
+//Intended to house all known static business rules
 namespace PaylocityCore.BusinessRules
 {
     public static class BR
     {
         public const double PERC_COMPANY_CONTRIBUTION = 4 / 5;
+
+        public const double A_NAME_MULTIPLIER = .9;
 
         public const int NUM_CHKS_PRYR = 26;
 

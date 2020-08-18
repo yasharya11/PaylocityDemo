@@ -21,5 +21,8 @@ namespace PaylocityCore.Entities
         public DateTime Dob { get; set; }
 
         public BenefitsModifier Modifier { get; set; }
+
+        [NotNull]
+        public int EmployeeId { get; set; }
     }
 }
